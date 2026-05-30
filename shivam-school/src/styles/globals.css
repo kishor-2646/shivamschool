@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700&display=swap');
 
 @layer base {
   :root {
@@ -404,4 +404,21 @@
   0% { opacity: 0; transform: scale(0.5); }
   70% { transform: scale(1.08); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+/* Additional utilities for Home enhancements */
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.7s ease forwards;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+}
+
+@layer components {
+  /* Lightbox body lock */
+  body.lightbox-open {
+    overflow: hidden;
+  }
 }
